@@ -1,0 +1,131 @@
+@import url('https://fonts.google.com/specimen/Inter');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+
+
+
+$Soft-orange: hsl(35, 77%, 62%);
+$Soft-red: hsl(5, 85%, 63%);
+$Off-white: hsl(36, 100%, 99%);
+$Grayish-blue: hsl(233, 8%, 79%);
+$Dark-grayish-blue: hsl(236, 13%, 42%);
+$Very-dark-blue: hsl(240, 100%, 5%);
+$font-stack:'Inter', sans-serif;
+$grid-area:grid ;
+
+*{
+    font-family:$font-stack;
+    padding:0;
+    margin:0;
+}
+
+body{
+
+    .layout-div{
+        display: flex;
+        flex-direction: column;
+        width:90vw;
+        margin:2%  auto;
+        padding:10px;
+
+        .header{
+            display: flex;
+            align-items:center;
+            justify-content: space-evenly;
+
+            .logo{
+                width:50%
+            }
+
+            .navigation{
+                display: flex;
+                gap:1rem;
+            
+            }
+            .navigation>a{
+                text-decoration: none; 
+                color:$Grayish-blue;
+            }
+           
+        }
+
+        .grid-container{
+            display: grid;
+            
+            color:white;
+            width:1200px;
+            height:80vh;
+            grid-template-areas: 
+            'grid-item1 grid-item1 grid-item2'
+            'grid-item3 grid-item4 grid-item2'
+            'grid-item5 grid-item6 grid-item7'
+            ;
+            
+            grid-template-columns: minmax(500px ,1fr);
+            grid-template-rows: minmax(250px,1fr) ;
+            margin:0 auto;
+            gap:10px;
+        }
+        .grid-container>.grid-item1{
+   
+            grid-area:grid-item1;
+            background: url(../assets/images/image-web-3-desktop.jpg)  ;
+            
+        }
+
+        .grid-container>.grid-item2{
+   
+            grid-area:grid-item2;
+            padding:30px;
+            background-color: hsl(240, 100%, 5%);
+            
+        }
+
+        .grid-container>.grid-item3{
+   
+            grid-area:grid-item3;
+
+            p{
+                font-size:60px;
+                color:hsl(240, 100%, 5%);
+                font-weight:700;
+                
+            }
+        }
+                
+        .grid-container>.grid-item4{
+        
+            grid-area:grid-item4;
+
+            .readmore-btn{
+                background-color:$Soft-red ;
+                padding:15px;
+                margin-top:1rem;
+                text-align: center;
+                width:200px;
+            }
+
+            
+        }
+
+        .grid-container>.grid-item5{
+   
+            grid-area:grid-item5;
+            display:flex;
+        }
+
+        .grid-container>.grid-item6{
+   
+            grid-area:grid-item6;
+            display:flex;
+        }
+        .grid-container>.grid-item7{
+           
+            grid-area:grid-item7;
+            display:flex;
+        }
+      
+
+    }
+   
+
+}
